@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  margin: 0 !important;
+}
+
+.secao {
+  display: flex;
+  flex: 2fr 1fr;
+  height: 50vh;
+  width: 50vw;
+}
+img {
+  position: relative;
+  /* width: 500px; */
+  /* height: 500px; */
+}
+.carousel-item img {
+  height: 60vh;
+}

@@ -10,23 +10,27 @@
   <title>K-Vision K-Pop</title>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
   <link rel="stylesheet" type="text/css" href="./estilo.css">
-  <logotop><img src='./imagem/top.jpg' border="center"></logotop>
+  <link rel="stylesheet" type="text/css" href="./styles/estilos.css">
 
 </head>
 
 <body>
-  <div id="menu">
-    <div id="menus">
-      <ul>
-        <li><a href=./aula1_css.html>Home</a></li>
-        <li><a href=./noticias.html>Noticiais</a></li>
-        <li><a href=./k-pop.php>K-Pop</a></li>
-        <li><a href=./k-drama.php>K-Drama</a></li>>
-        <li><a href=./contato.html>Contato</a></li>
-        <li><a class="end">&nbsp;</a></li>
-      </ul>
+<header>
+    <div class="logotopo">
+        <img src='./imagem/top.jpg' alt="logo do site">
     </div>
-  </div>
+    <navbar>
+        <div class="menu">
+            <ul>
+                <li><a href=./home.html>Homes</a></li>
+                <li><a href=./noticias.html>Noticiais</a></li>
+                <li><a href=./k-pop.php>K-Pop</a></li>
+                <li><a href=./k-drama.php>K-Drama</a></li>
+                <li><a href=./contato.html>Contato</a></li>
+            </ul>
+        </div>
+    </navbar>
+</header>
   <br>
   <h2>MVs</h2></br>
     
@@ -44,13 +48,15 @@
 
 </body>
 <footer>
-     <br>contato@xxxx</br>
-
-     <img src="./imagem/instal.png" height='100px' width='100px'></a>
-     <a href="https://www.instagram.com/michael_hinoyama/"><br>Michael Andre Souza da Costa</br></a>
-     <a href="https://www.instagram.com/lamoiaigor/"><br>Igor Lamoia</br></a>
-    <br>©2021 Deselvolvedores:</br>
-    <br></br>
+    <span>
+        Contatos:
+    </span> 
+        <a href="https://www.instagram.com/lamoiaigor/">Igor Lamoia
+        <img src="./imagem/instal.png" alt="instagram logo"/></a>
+        <a href="https://www.instagram.com/michael_hinoyama/">Michael Andre
+        <img src="./imagem/instal.png" alt="instagram logo"/></a>
+<span>
+    &copy 2021
+</span>    
 </footer>
-
 </html>

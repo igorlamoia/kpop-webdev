@@ -15,7 +15,7 @@
 			$email 			 = $_POST['email'];
 			$cidade  	 	 = $_POST['cidade'];
 			$estado  		 = $_POST['UF'];
-			$comentarios = $_POST['comentarios'];
+			$senha 			 = $_POST['senha'];
 			$erro 			 = 0;
 
 			//Verifica se o campo nome não está em branco
@@ -44,8 +44,8 @@
 
 			//Verifica se o campo comentarios está vazio
 
-			if (empty($comentarios)) {
-				echo "Favor entre com algum comentário.<br>";
+			if (strlen($senha) < 4 ) {
+				echo "Senha tem que ter no mínimo 4 digitos.<br>";
 				$erro = 1;
 			}
 

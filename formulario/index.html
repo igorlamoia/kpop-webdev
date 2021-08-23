@@ -13,17 +13,18 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../styles/reset.css" />
-    <link rel="stylesheet" href="../styles/estilo.css" />
+    <link rel="stylesheet" href="../styles/estilos.css" />
     <link rel="stylesheet" href="../styles/formulario.css" />
     <link rel="icon" type="image/png" href="../images/VSicone.png" />
+
   </head>
   <body>
+    <div class="logotopo">
+      <img src='../imagem/top.jpg' alt="logo do site">
+    </div>
     <navbar class="menu">
-      <a href="../aula1_css.html"
-        ><img src="../images/VSicone.png" alt="Home"
-      /></a>
       <ul>
-        <li><a type="button" href="../aula1_css.html">Home</a></li>
+        <li><a type="button" href="../home.html">Home</a></li>
         <!-- <li><a type="button" href="../index.html">Estilos</a></li> -->
         <li><a type="button" href="./#">Contato</a></li>
       </ul>
@@ -31,7 +32,7 @@
     <div class="caixao">
       <div class="formulario">
         <div class="espacamento">
-          <h1>Cadastro de Usuários do Site</h1>
+          <h1>Cadastro de Usuários K-Vision</h1>
           <form
             class="row g-3 needs-validation"
             method="POST"
@@ -59,6 +60,17 @@
                 required
               />
             </div>
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha (Mínimo 4 dígitos)</label>
+              <input
+                type="password"
+                class="form-control"
+                id="senha"
+                placeholder="****"
+                name="senha"
+                required
+              />
+            </div>
             <div class="col-md-6">
               <label for="cidade" class="form-label">Cidade</label>
               <input
@@ -70,6 +82,7 @@
                 required
               />
             </div>
+
             <div class="col-md-6">
               <label for="inputState" class="form-label">State</label>
               <select id="inputState" class="form-select" name="UF">
@@ -103,16 +116,7 @@
                 <option value="TO">Tocantins</option>
               </select>
             </div>
-            <div class="mb-3">
-              <label for="comentarios" class="form-label">Comentários:</label>
-              <textarea
-                class="form-control"
-                id="comentarios"
-                rows="3"
-                name="comentarios"
-                required
-              ></textarea>
-            </div>
+
             <button type="submit" name="enviar" class="botao" target="_blank">
               <span style="z-index: 1">Efetuar Cadastro</span>
             </button>

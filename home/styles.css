@@ -1,0 +1,221 @@
+/* Slider */
+
+.container-fluid {
+  padding: 0;
+}
+
+#mainSlider .carousel-inner,
+#mainSlider .carousel-item {
+  height: 90vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.carousel-item img {
+  opacity: 0.2;
+}
+.carousel-item iframe {
+  opacity: 0.3;
+}
+
+#mainSlider .carousel-caption {
+  top: 30%;
+}
+#mainSlider .carousel-caption h2 {
+  font-size: 60px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  color: #f6f6f6;
+  font-weight: bolder;
+}
+#mainSlider .carousel-caption p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.main-btn {
+  background: linear-gradient(275deg, #cd2e3bc9, #0048a0b2);
+
+  color: #fff;
+  text-transform: uppercase;
+  width: 200px;
+  height: 60px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 3px solid transparent;
+  transition: 0.5s;
+}
+
+.main-btn:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border-color: #cd2e3bc9;
+}
+
+.carousel-indicators .active {
+  background-color: #0047a0;
+}
+
+.main-title {
+  color: #444;
+  margin: 0 0 65px 0;
+  font-size: 40px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 17px;
+  color: #444;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.col-md-6 p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  /* geral */
+  .container {
+    padding: 20px 0;
+  }
+
+  /* slider */
+  #mainSlider .carousel-inner,
+  #mainSlider .carousel-item {
+    height: auto;
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 28px;
+  }
+
+  #mainSlider .carousel-caption p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .carousel-caption {
+    left: 10%;
+    right: 10%;
+  }
+
+  /* about */
+  #about-area img {
+    margin-top: 100px;
+  }
+
+  #data-area p {
+    font-size: 16px;
+  }
+
+  /* team */
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-text {
+    font-size: 12px;
+  }
+
+  /* apply */
+  #apply-area .apply-box {
+    padding: 50px 25px;
+  }
+
+  /* news */
+  #news-area p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #email-input {
+    width: 70%;
+  }
+
+  #call-area {
+    margin-top: 30px;
+  }
+
+  #call-area .container {
+    padding: 30px;
+  }
+
+  #call-area p,
+  #call-area #call-btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  /* slider */
+  #mainSlider {
+    margin-top: 65px;
+  }
+
+  #mainSlider .carousel-caption {
+    top: 15%;
+  }
+  .col-md-12 h3.main-title::after {
+    margin-top: -20px;
+  }
+  .container p,
+  .container li {
+    padding: 0 20px 0 20px;
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  #mainSlider .carousel-caption h3 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  #mainSlider .carousel-caption p {
+    display: none;
+  }
+
+  /* about */
+  .main-title {
+    font-size: 30px;
+  }
+
+  #about-area img {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  /* data */
+  .circle-box {
+    width: 50%;
+  }
+
+  #team-area .col-md-3 {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+footer {
+  display: flex;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.texto-gradiente {
+  background: linear-gradient(275deg, #cd2e3a, #0047a0);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

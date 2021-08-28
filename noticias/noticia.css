@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+.video {
+  height: 50vh;
+}
+main {
+  padding: 0 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* background: linear-gradient(180deg, #cd2e3a, white, #0047a0); */
+}
+.center {
+  text-align: center;
+}
+
+.img img {
+  width: 400px;
+  height: 400px;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  background-color: white;
+  text-align: justify;
+}
+
+h3,
+h4,
+h5 {
+  text-align: center;
+}
+h1 {
+  font-size: 3rem !important;
+}
+.texto-gradiente {
+  background: linear-gradient(275deg, #cd2e3a, #0047a0);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

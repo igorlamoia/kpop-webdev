@@ -51,6 +51,7 @@
 
 			//Verifica se não houve erro - neste caso chama a include para inserir os dados
 			if ($erro == 0) {
+				header("Location: index.html");
 				echo "Todos os dados foram digitados corretamente.<br>";
 				include 'insere.php';
 			}

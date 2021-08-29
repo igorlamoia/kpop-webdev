@@ -21,7 +21,7 @@ $cidade  	 	 = $_POST['cidade'];
 $estado  		 = $_POST['UF'];
 
 // Guardando na variável $sql a string com os comandos pra ser executada
-$sql = "INSERT INTO cadastro VALUES";
+$sql = "INSERT INTO usuarios (NOME, EMAIL, CIDADE, ESTADO, SENHA) VALUES";
 $sql .= "('$nome','$email', '$cidade', '$estado', '$senha')";
 
 // Executando a variável sql

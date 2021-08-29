@@ -25,25 +25,25 @@ header("Location: index.html");
 
 		//Verifica se o campo nome não está em branco
 		if (empty($nome) || !strstr($nome, ' ')) {
-			echo "Favor digitar o seu nome corretamente.<br>";
+			$MensagemErro "Favor digitar o seu nome corretamente.<br>";
 			$erro = 1;
 		}
 
 		//Verifica se o campo email está preenchido corretamente
 		if (strlen($email) < 8 || !strstr($email, '@')) {
-			echo "Favor digitar o seu email corretamente.<br>";
+			$MensagemErro "Favor digitar o seu email corretamente.<br>";
 			$erro = 1;
 		}
 
 		//Verifica se o campo cidade está em branco
 		if (empty($cidade)) {
-			echo "Favor digitar sua cidade.<br>";
+			$MensagemErro "Favor digitar sua cidade.<br>";
 			$erro = 1;
 		}
 
 		//Verifica se o campo UF está preenchido com 2 digitos
 		if (strlen($estado) != 2) {
-			echo "Favor digitar o seu estado corretamente.<br>";
+			$MensagemErro "Favor digitar o seu estado corretamente.<br>";
 			$erro = 1;
 		}
 
@@ -51,7 +51,7 @@ header("Location: index.html");
 
 		if (strlen($senha) < 4) {
 			// Vitoria gatinha
-			echo "Senha tem que ter no mínimo 4 digitos.<br>";
+			$MensagemErro "Senha tem que ter no mínimo 4 digitos.<br>";
 			$erro = 1;
 		}
 
@@ -60,8 +60,8 @@ header("Location: index.html");
 			echo "Todos os dados foram digitados corretamente.<br>";
 			include 'insere.php';
 		} else {
-			// Vitoria perfeita vai fazer alerta de erro PODEMOS FAZER UMA VARIAVEL Mensagem erro rece
-			echo "Deu "
+			// Vitoria, alerta de erro de novo kkkk
+			echo $MensagemErro;
 		}
 		?>
 

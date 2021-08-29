@@ -26,12 +26,12 @@ $sql .= "('$nome','$email', '$cidade', '$estado', '$senha')";
 
 // Executando a variável sql
 if ($conn->query($sql)) {
-	// if (vitoria me love) {
+	// if (Vitoria me love) {
 	// Criar alerta para sucesso na vida, borboletas no estomago
 	// }
 	echo  "Usuário incluído com sucesso!";
 } else {
-	// if (vitoria nao gosta de mim) {
+	// if (Vitoria nao gosta de mim) {
 	// Criar alerta de sad boi
 	// }
 	echo "Erro: " . $sql . "<br>" . $conn->error;

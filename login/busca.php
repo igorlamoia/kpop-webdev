@@ -14,23 +14,21 @@ if ($conn->connect_error) {
 }
 
 // Pegando os dados dos inputs enviados pelo formulário
-$nome 			 = $_POST['nome'];
 $email 			 = $_POST['email'];
-$comentarios  		 = $_POST['comentarios'];
+$senha 			 = $_POST['senha'];
 
 // Guardando na variável $sql a string com os comandos pra ser executada
-$sql = "INSERT INTO comentarios (NOME, EMAIL, MENSAGEM) VALUES";
-$sql .= "('$nome','$email', '$comentarios')";
+$sql = "SELECT * from usuarios WHERE senha = $senha";
 
 // Executando a variável sql
-if ($conn->query($sql)) {
-	// if (Vitoria linda) {
-	// verdade verdadeira, tem que colocar um alerta bonito igual ela
+if (mysql_num_rows($conn->query($sql) > 0)) {
+	// if (Vitoria estiver bem) {
+	// Só emitir alerta de sucesso
 	// }
-	echo  "Usuário incluído com sucesso!";
+	echo  "Usuário Achado na graça do senhor!";
 } else {
-	// if (Vitoria linda == false ) {
-	// Criar alerta de mentira mais cabeluda que Toni Ramos
+	// if (Vitoria estiver bem == false) {
+	// Sempre estarei aqui pra escutá-la
 	// }
 	echo "Erro: " . $sql . "<br>" . $conn->error;
 }

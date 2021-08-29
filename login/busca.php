@@ -18,8 +18,8 @@ $email 			 = $_POST['email'];
 $senha 			 = $_POST['senha'];
 
 // Guardando na variável $sql a string com os comandos pra ser executada
-$sql = "SELECT * from usuarios WHERE senha = $senha";
-// Executando a variável sql
+$sql = "SELECT * from usuarios WHERE SENHA = $senha";
+// Executando a variável sql Tá dando warning
 if (mysqli_num_rows($conn->query($sql)) > 0) {
 	// if (Evento de anime && Igor casado com Vitoria) {
 	// Sem evento de anime, sem otaku piranha

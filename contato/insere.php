@@ -19,7 +19,7 @@ $email 			 = $_POST['email'];
 $comentarios  		 = $_POST['comentarios'];
 
 // Guardando na variável $sql a string com os comandos pra ser executada
-$sql = "INSERT INTO usuarios (nome, email, mensagem) VALUES";
+$sql = "INSERT INTO comentarios (NOME, EMAIL, MENSAGEM) VALUES";
 $sql .= "('$nome','$email', '$comentarios')";
 
 // Executando a variável sql

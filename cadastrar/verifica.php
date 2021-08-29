@@ -50,6 +50,7 @@ header("Location: index.html");
 		//Verifica se o campo comentarios está vazio
 
 		if (strlen($senha) < 4) {
+			// Vitoria gatinha
 			echo "Senha tem que ter no mínimo 4 digitos.<br>";
 			$erro = 1;
 		}
@@ -58,6 +59,9 @@ header("Location: index.html");
 		if ($erro == 0) {
 			echo "Todos os dados foram digitados corretamente.<br>";
 			include 'insere.php';
+		} else {
+			// Vitoria perfeita vai fazer alerta de erro PODEMOS FAZER UMA VARIAVEL Mensagem erro rece
+			echo "Deu "
 		}
 		?>
 

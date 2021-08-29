@@ -9,6 +9,7 @@ header("Location: index.html");
 <head>
 	<title>Verifica</title>
 	<meta charset="utf-8">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <form method="POST" action="insere.php">
@@ -58,8 +59,17 @@ header("Location: index.html");
 		//Verifica se não houve erro - neste caso chama a include para inserir os dados
 		if ($erro == 0) {
 			include 'insere.php';
+			 echo "<script type='text/javascript'> swal('Usuário cadastrado com  sucesso!', '','success').then((value) => {
+				javascript:window.location='login.html';
+			  });;</script>";
+
 		} else {
-			// Vitoria, alerta de erro de novo kkkk
+			
+    echo "<script type='text/javascript'> swal('Usuário não cadastrado', 'Verifique seus dados.','error').then((value) => {
+     javascript:window.location='login.html';
+   });;</script>";
+  
+  
 			echo $MensagemErro;
 		}
 		?>

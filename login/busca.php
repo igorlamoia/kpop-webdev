@@ -19,18 +19,19 @@ $senha 			 = $_POST['senha'];
 
 // Guardando na variável $sql a string com os comandos pra ser executada
 $sql = "SELECT * from usuarios WHERE senha = $senha";
-
 // Executando a variável sql
-if (mysql_num_rows($conn->query($sql) > 0)) {
-	// if (Vitoria estiver bem) {
-	// Só emitir alerta de sucesso
+if (mysqli_num_rows($conn->query($sql)) > 0) {
+	// if (Evento de anime && Igor casado com Vitoria) {
+	// Sem evento de anime, sem otaku piranha
 	// }
 	echo  "Usuário Achado na graça do senhor!";
-} else {
-	// if (Vitoria estiver bem == false) {
-	// Sempre estarei aqui pra escutá-la
+} else if (!$conn->query($sql)) {
+	// if (Evento de anime == false) {
+	// Levar Vitória pra viajar pra Ibitipoca e ficar hospedado em casa com lareira
 	// }
 	echo "Erro: " . $sql . "<br>" . $conn->error;
+} else {
+	echo "Usuário Não Achado digita sabosta direito";
 }
 // Fechando a conexão com o banco
 $conn->close();

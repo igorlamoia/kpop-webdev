@@ -47,7 +47,7 @@ header("Location: index.html");
 			$erro = 1;
 		}
 
-		//Verifica se o campo comentarios está vazio
+		//Verifica se o campo senha TEM PELO MENOS 4 digitos
 
 		if (strlen($senha) < 4) {
 			// Vitoria gatinha
@@ -57,7 +57,6 @@ header("Location: index.html");
 
 		//Verifica se não houve erro - neste caso chama a include para inserir os dados
 		if ($erro == 0) {
-			echo "Todos os dados foram digitados corretamente.<br>";
 			include 'insere.php';
 		} else {
 			// Vitoria, alerta de erro de novo kkkk

@@ -16,21 +16,23 @@ if ($conn->connect_error) {
 // Pegando os dados dos inputs enviados pelo formulário
 $email 			 = $_POST['email'];
 $senha 			 = $_POST['senha'];
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$senha = mysqli_real_escape_string($conn, $_POST['senha']);
 
 // Guardando na variável $sql a string com os comandos pra ser executada
 $sql = "SELECT * from usuarios WHERE EMAIL = '$email' AND SENHA = '$senha'";
 $result = mysqli_query($conn, $sql);
+
+
 // tentei usar mysqli_query ao inves de $conn->query($sql) mas tb n resolveu kkk
 // Executando a variável sql Tá dando warning, tem que mudar essa linha debaixo
 if ($result) {
-	$linhas = mysqli_num_rows($result);
+	$linhas = mysqli_num_rows($result); //conta as linhas retornadas
 	
-	if ($linhas) {
-		echo  "Usuário Achado na graça do senhor!";
+	if ($linhas == 1 ) {
+		//COLOCA O  header('Location: PAGINA.PHP'); AQUI
 	} else {
-		echo "Usuário Não Achado digita sabosta direito";
-	}
-} else if (!$conn->query($sql)) { ?>
+	?>
 <!DOCTYPE html>
   <html lang="pt-br">
 
@@ -38,16 +40,21 @@ if ($result) {
     <meta charset="UTF-8">
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
+	<body>
 
 <?php
 // alerta de login não existente
 	echo "<script type='text/javascript'> swal('Usúario não encontrado!', 'verifique seu login.','error').then((value) => {
 		javascript:window.location='index.html';
 	  });;</script>"; 
-	  // if (vitoria com saudades do igor) {
-	// me espera ate dezembro
-	// }
+	}
+} else if (!$conn->query($sql)) { 
+	
 	echo "Erro: " . $sql . "<br>" . $conn->error;
 }
 // Fechando a conexão com o banco
 $conn->close();
+?>
+ </body>
+
+</html>

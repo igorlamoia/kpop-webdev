@@ -31,6 +31,8 @@ if ($conn->query($sql)) { ?>
     <meta charset="UTF-8">
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
+	<body>
+
 	
 	<?php
     echo "<script type='text/javascript'> swal('Contato enviado com sucesso!', '','success').then((value) => {
@@ -50,3 +52,7 @@ if ($conn->query($sql)) { ?>
 }
 // Fechando a conexão com o banco
 $conn->close();
+?>
+ </body>
+
+</html>

@@ -24,17 +24,28 @@ $result = mysqli_query($conn, $sql);
 // Executando a variável sql Tá dando warning, tem que mudar essa linha debaixo
 if ($result) {
 	$linhas = mysqli_num_rows($result);
-	// if (Evento de anime && Igor casado com Vitoria) {
-	// Sem evento de anime, sem otaku piranha
-	// }
+	
 	if ($linhas) {
 		echo  "Usuário Achado na graça do senhor!";
 	} else {
 		echo "Usuário Não Achado digita sabosta direito";
 	}
-} else if (!$conn->query($sql)) {
-	// if (Evento de anime == false) {
-	// Levar Vitória pra viajar pra Ibitipoca e ficar hospedado em casa com lareira
+} else if (!$conn->query($sql)) { ?>
+<!DOCTYPE html>
+  <html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	</head>
+
+<?php
+// alerta de login não existente
+	echo "<script type='text/javascript'> swal('Usúario não encontrado!', 'verifique seu login.','error').then((value) => {
+		javascript:window.location='index.html';
+	  });;</script>"; 
+	  // if (vitoria com saudades do igor) {
+	// me espera ate dezembro
 	// }
 	echo "Erro: " . $sql . "<br>" . $conn->error;
 }

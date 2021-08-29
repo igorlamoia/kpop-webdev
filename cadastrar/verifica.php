@@ -56,17 +56,18 @@ header("Location: index.html");
 			$erro = 1;
 		}
 
-		//Verifica se não houve erro - neste caso chama a include para inserir os dados
+		//Verifica se não houve erro - neste caso redireciona para insere.php para inserir os dados
 		if ($erro == 0) {
-			include 'insere.php';
+		
 			 echo "<script type='text/javascript'> swal('Usuário cadastrado com  sucesso!', '','success').then((value) => {
-				javascript:window.location='login.html';
+				javascript:window.location='insere.php';
 			  });;</script>";
 
 		} else {
+			//Caso apresente erro, mostra o alert e volta para o index.html
 			
     echo "<script type='text/javascript'> swal('Usuário não cadastrado', 'Verifique seus dados.','error').then((value) => {
-     javascript:window.location='login.html';
+     javascript:window.location='index.html';
    });;</script>";
   
   

@@ -23,15 +23,29 @@ $sql = "INSERT INTO comentarios (NOME, EMAIL, MENSAGEM) VALUES";
 $sql .= "('$nome','$email', '$comentarios')";
 
 // Executando a variável sql
-if ($conn->query($sql)) {
-	// if (Vitoria linda) {
-	// verdade verdadeira, tem que colocar um alerta bonito igual ela
-	// }
+if ($conn->query($sql)) { ?>
+ <!DOCTYPE html>
+  <html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	</head>
+	
+	<?php
+    echo "<script type='text/javascript'> swal('Contato enviado com sucesso!', '','success').then((value) => {
+     javascript:window.location='index.html';
+   });;</script>"; 
+   // alerta de contato enviado
+
 	echo  "Usuário incluído com sucesso!";
 } else {
-	// if (Vitoria linda == false ) {
-	// Criar alerta de mentira mais cabeluda que Toni Ramos
-	// }
+	echo "<script type='text/javascript'> swal('Falha ao enviar contato!', '','error').then((value) => {
+		javascript:window.location='index.html';
+	  });;</script>";
+	
+	// alerta de mentira mais cabeluda que Toni Ramos
+	
 	echo "Erro: " . $sql . "<br>" . $conn->error;
 }
 // Fechando a conexão com o banco

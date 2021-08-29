@@ -16,23 +16,21 @@ if ($conn->connect_error) {
 // Pegando os dados dos inputs enviados pelo formulário
 $nome 			 = $_POST['nome'];
 $email 			 = $_POST['email'];
-$senha  	 = $_POST['senha'];
-$cidade  	 	 = $_POST['cidade'];
-$estado  		 = $_POST['UF'];
+$comentarios  		 = $_POST['comentarios'];
 
 // Guardando na variável $sql a string com os comandos pra ser executada
-$sql = "INSERT INTO usuarios (NOME, EMAIL, CIDADE, ESTADO, SENHA) VALUES";
-$sql .= "('$nome','$email', '$cidade', '$estado', '$senha')";
+$sql = "INSERT INTO usuarios (nome, email, mensagem) VALUES";
+$sql .= "('$nome','$email', '$comentarios')";
 
 // Executando a variável sql
 if ($conn->query($sql)) {
-	// if (vitoria me love) {
-	// Criar alerta para sucesso na vida, borboletas no estomago
+	// if (vitoria linda) {
+	// verdade verdadeira, tem que colocar um alerta bonito igual ela
 	// }
 	echo  "Usuário incluído com sucesso!";
 } else {
-	// if (vitoria nao gosta de mim) {
-	// Criar alerta de sad boi
+	// if (vitoria linda == false ) {
+	// Criar alerta de mentira mais cabeluda que Toni Ramos
 	// }
 	echo "Erro: " . $sql . "<br>" . $conn->error;
 }

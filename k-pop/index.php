@@ -2,8 +2,7 @@
 include "../connecta.php";
 // Guardando na variável $sql a string com os comandos pra ser executada
 $sql = "SELECT * from videos";
-$result = mysqli_query($conn, $sql);
-$linhas = mysqli_fetch_row($result);
+$resultado = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 
@@ -38,9 +37,9 @@ $linhas = mysqli_fetch_row($result);
 
   <div id="vid">
     <?php 
-    foreach ($linhas as $linha) {
+    while ($video = $resultado->fetch_array()) {
     ?>
-    <iframe width="536" height="320" src="<?php $linha['URL']; ?>" title="YouTube video player" frameborder="15" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="536" height="320" src="<?php echo $video['URL']; ?>" title="YouTube video player" frameborder="15" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <?php 
     } 
     ?>

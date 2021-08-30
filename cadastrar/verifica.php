@@ -1,4 +1,4 @@
-<?php include "../alert.php"; ?>
+<?php include "../alerta.php"; ?>
 <form method="POST" action="insere.php">
 		<?php
 		$nome 			 = $_POST['nome'];
@@ -10,25 +10,25 @@
 
 		//Verifica se o campo nome não está em branco
 		if (empty($nome) || !strstr($nome, ' ')) {
-			$MensagemErro = "Favor digitar o seu nome completo.<br>";
+			$MensagemErro = "Favor digitar o seu nome completo.";
 			$erro = 1;
 		}
 
 		//Verifica se o campo email está preenchido corretamente
 		if (strlen($email) < 8 || !strstr($email, '@')) {
-			$MensagemErro = "Favor digitar o seu email corretamente.<br>";
+			$MensagemErro = "Favor digitar o seu email corretamente.";
 			$erro = 1;
 		}
 
 		//Verifica se o campo cidade está em branco
 		if (empty($cidade)) {
-			$MensagemErro = "Favor digitar sua cidade.<br>";
+			$MensagemErro = "Favor digitar sua cidade.";
 			$erro = 1;
 		}
 
 		//Verifica se o campo UF está preenchido com 2 digitos
 		if (strlen($estado) != 2) {
-			$MensagemErro = "Favor digitar o seu estado corretamente.<br>";
+			$MensagemErro = "Favor digitar o seu estado corretamente.";
 			$erro = 1;
 		}
 

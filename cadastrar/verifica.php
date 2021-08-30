@@ -1,21 +1,5 @@
-<?php
-header("Location: index.html");
-
-?>
-<!DOCTYPE html>
-
-<html lang="pt-br">
-
-<head>
-	<title>Verifica</title>
-	<meta charset="utf-8">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
-
+<?php include "../alert.php"; ?>
 <form method="POST" action="insere.php">
-
-	<body>
-
 		<?php
 		$nome 			 = $_POST['nome'];
 		$email 			 = $_POST['email'];
@@ -26,7 +10,7 @@ header("Location: index.html");
 
 		//Verifica se o campo nome não está em branco
 		if (empty($nome) || !strstr($nome, ' ')) {
-			$MensagemErro = "Favor digitar o seu nome corretamente.<br>";
+			$MensagemErro = "Favor digitar o seu nome completo.<br>";
 			$erro = 1;
 		}
 
@@ -58,20 +42,13 @@ header("Location: index.html");
 
 		//Verifica se não houve erro - neste caso redireciona para insere.php para inserir os dados
 		if ($erro == 0) {
-		
-			 echo "<script type='text/javascript'> swal('Usuário cadastrado com  sucesso!', '','success').then((value) => {
-				javascript:window.location='insere.php';
-			  });;</script>";
-
+				include "insere.php";
 		} else {
 			//Caso apresente erro, mostra o alert e volta para o index.html
 			
-    echo "<script type='text/javascript'> swal('Usuário não cadastrado', 'Verifique seus dados.','error').then((value) => {
+    echo "<script type='text/javascript'> swal('Usuário não cadastrado', '$MensagemErro','error').then((value) => {
      javascript:window.location='index.html';
-   });;</script>";
-  
-  
-			echo $MensagemErro;
+   		});;</script>";
 		}
 		?>
 

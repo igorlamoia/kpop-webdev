@@ -1,4 +1,5 @@
 <?php
+include "../alerta.php";
 // Configurando as variáveis pra conectar no banco
 $servername = "banco";
 $username = "root";
@@ -26,15 +27,16 @@ $sql .= "('$nome','$email', '$cidade', '$estado', '$senha')";
 
 // Executando a variável sql
 if ($conn->query($sql)) {
-	// if (Vitoria me love) {
-	// Criar alerta para sucesso na vida, borboletas no estomago
-	// }
-	echo  "Usuário incluído com sucesso!";
+	echo "<script type='text/javascript'> swal('Usuário cadastrado!', 'Usuário cadastrado com sucesso','success').then((value) => {
+		javascript:window.location='../login';
+			});;</script>";
 } else {
-	// if (Vitoria nao gosta de mim) {
-	// Criar alerta de sad boi
-	// }
-	echo "Erro: " . $sql . "<br>" . $conn->error;
+	echo "<script type='text/javascript'> swal('$sql', '$conn->error','success').then((value) => {
+		javascript:window.location='../cadastrar';
+			});;</script>";
 }
 // Fechando a conexão com o banco
 $conn->close();
+?>
+</body>
+</html>

@@ -6,17 +6,8 @@ $password = "12345";
 $database = "kpop";
 // Criando a conexao de fato
 $conn = new mysqli($servername, $username, $password, $database);
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-	<meta charset="UTF-8">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-</head>
-
-<body>
-	<?php
+	
+include "../alerta.php";
 	// Checando se foi bem sucedida
 	if ($conn->connect_error) {
 

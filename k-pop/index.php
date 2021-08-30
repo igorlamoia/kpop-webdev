@@ -1,5 +1,13 @@
 <?php
+// Guardando na variável $sql a string com os comandos pra ser executada
+$sql = "SELECT * from videos";
+$result = mysqli_query($conn, $sql);
+$linhas = mysqli_fetch_row($result);
 
+foreach ($linhas as $linha => $value) {
+  echo "$value<br>";
+}
+exit;
 ?>
 <!DOCTYPE html>
 

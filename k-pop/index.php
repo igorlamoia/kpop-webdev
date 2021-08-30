@@ -4,11 +4,6 @@ include "../connecta.php";
 $sql = "SELECT * from videos";
 $result = mysqli_query($conn, $sql);
 $linhas = mysqli_fetch_row($result);
-
-foreach ($linhas as $linha => $value) {
-  echo "$value<br>";
-}
-exit;
 ?>
 <!DOCTYPE html>
 
@@ -42,10 +37,14 @@ exit;
   <h2>MVs</h2></br>
 
   <div id="vid">
-    <iframe width="536" height="320" src="https://www.youtube.com/embed/MqzX9JAZ08U" title="YouTube video player" frameborder="15" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="536" height="320" src="https://www.youtube.com/embed/CuklIb9d3fI" title="YouTube video player" frameborder="15" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="536" height="320" src="https://www.youtube.com/embed/XA2YEHn-A8Q" title="YouTube video player" frameborder="15" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+    <?php 
+    foreach ($linhas as $linha) {
+    ?>
+    <iframe width="536" height="320" src="<?php $linha['URL']; ?>" title="YouTube video player" frameborder="15" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <?php 
+    } 
+    ?>
+    </div>
 
 </body>
 <footer>

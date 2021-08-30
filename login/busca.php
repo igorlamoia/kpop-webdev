@@ -27,11 +27,14 @@ if ($result) {
 	$linhas = mysqli_num_rows($result); //conta as linhas retornadas
 
 	if ($linhas == 1) {
-			alerta('Usúario Encontrado!', 'Logando', 'success', 'index.html');
-			//COLOCA O  header('Location: PAGINA.PHP'); AQUI
+		echo "<script type='text/javascript'> swal('Usúario Encontrado!', 'Logando','success').then((value) => {
+			javascript:window.location='index.html';
+			});;</script>";
 		} else {
 			// alerta de login não existente
-			alerta('Usúario não encontrado!', 'verifique seu login.', 'error', 'index.html');
+			echo "<script type='text/javascript'> swal('Usúario não encontrado!', 'verifique seu login.','error').then((value) => {
+				javascript:window.location='index.html';
+				});;</script>";
 	}
 } else if (!$conn->query($sql)) {
 

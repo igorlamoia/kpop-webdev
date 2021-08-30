@@ -9,17 +9,4 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
-<?php 
-
-/**
- * Cria um alerta, tendo como
- * - testando
- */
-  function alerta($titulo, $mensagem, $sucesso, $direcionar = 'index.html') {
-    echo "<script type='text/javascript'> swal('$titulo', '$mensagem','$sucesso').then((value) => {
-      javascript:window.location='$direcionar';
-      });;</script>";
-  }
-?>
-
 <body style="height: 100vh; width: 100vw; overflow: hidden; background: no-repeat center url('../imagem/login.jpg'); backdrop-filter: grayscale(0.9) opacity(0.2);">

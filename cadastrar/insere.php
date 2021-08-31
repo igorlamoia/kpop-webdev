@@ -1,8 +1,6 @@
 <?php
 include "../alerta.php";
 include "../connecta.php";
-// Configurando as variáveis pra conectar no banco
-
 // Criando a conexao de fato
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -37,4 +35,5 @@ if ($conn->query($sql)) {
 $conn->close();
 ?>
 </body>
+
 </html>

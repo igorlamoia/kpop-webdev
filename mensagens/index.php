@@ -1,5 +1,9 @@
 <?php
 session_start();
+include "../connecta.php";
+// Guardando na variável $sql a string com os comandos pra ser executada
+$sql = "SELECT * from comentarios";
+$resultado = mysqli_query($conn, $sql);
 $usuario = $_SESSION["email"];
 if (!$usuario) {
   require "../alerta.php";
@@ -16,7 +20,7 @@ if (!$usuario) {
 <html lang="pt-br">
 
 <head>
-  <title>Cadastro de vídeos</title>
+  <title>Mensagens enviadas</title>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="../images/VSicone.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,35 +39,20 @@ if (!$usuario) {
   <navbar class="menu">
     <ul>
       <li><a type="button" href="../home">Sair</a></li>
-      <li><a type="button" href="../mensagens">Ler Mesagens</a></li>
+      <li><a type="button" href="../videos">Cadastrar Vídeos</a></li>
     </ul>
   </navbar>
-  <div class="caixao">
-    <div class="formulario">
-      <div class="espacamento">
-        <h1>Cadastro de Vídeos</h1>
-        <form class="row g-3 needs-validation" method="POST" action="verifica.php">
-          <div class="mb-3">
-            <label for="nome" class="form-label">Nome:</label>
-            <input type="text" class="form-control" id="nome" placeholder="Seu nome" name="nome" required />
-          </div>
-          <div class="mb-3">
-            <label for="url" class="form-label">Url:</label>
-            <input type="url" class="form-control" id="url" placeholder="https://youtube" name="url" required />
-          </div>
-          <div class="mb-3">
-            <label for="banda" class="form-label">Banda</label>
-            <input type="text" class="form-control" id="banda" placeholder="****" name="banda" required />
-          </div>
-          <button type="submit" name="enviar" class="botao" target="_blank">
-            <span style="z-index: 1">Cadastrar Vídeo</span>
-          </button>
-        </form>
+<div>
+    <?php 
+    while ($video = $resultado->fetch_array()) {
+    ?>
+      <div>
+        Usuario: <?php echo $video['NOME']; ?>
+        mensagem: <?php echo $video['MENSAGEM']; ?>
       </div>
+    <?php 
+    } 
+    ?>
     </div>
-  </div>
-  <ul class="quadradinhos"></ul>
 </body>
-<script src="../scripts/formulario.js"></script>
-
 </html>

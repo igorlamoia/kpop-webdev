@@ -1,8 +1,7 @@
 <?php
-// Configurando as variáveis pra conectar no banco
-include "../connecta.php";
 include "../alerta.php";
-// Checando se foi bem sucedida
+include "../connecta.php";
+
 if ($conn->connect_error) {
 
 	die("Conexão Falhou:" . $conn->connect_error);
@@ -12,33 +11,23 @@ $email 			 = $_POST['email'];
 $senha 			 = $_POST['senha'];
 
 // Guardando na variável $sql a string com os comandos pra ser executada
-$sql = "SELECT * from usuarios WHERE EMAIL = 'igor@hotmail.com' AND SENHA = '0998'";
-$result = mysqli_query($conn, $sql);
+$sql = "SELECT * from usuarios WHERE SENHA = '$senha' AND EMAIL = '$email'";
 
-
-// tentei usar mysqli_query ao inves de $conn->query($sql) mas tb n resolveu kkk
-// Executando a variável sql Tá dando warning, tem que mudar essa linha debaixo
-if ($result) {
-	$linhas = mysqli_num_rows($result); //conta as linhas retornadas
-
-	if ($linhas == 1) {
-		echo "<script type='text/javascript'> swal('Usúario Encontrado! $email $senha', 'verifique seu login.','success').then((value) => {
-				javascript:window.location='index.html';
-				});;</script>";
-		//COLOCA O  header('Location: PAGINA.PHP'); AQUI
-	} else {
-		// alerta de login não existente
-		echo "<script type='text/javascript'> swal('Usúario não encontrado Merda! $email $senha', 'verifique seu login.','error').then((value) => {
+$resultado = mysqli_query($conn, $sql);
+$usuario = $resultado->fetch_array();
+// Executando a variável sql
+if (isset($usuario['NOME']) && !empty($usuario['NOME'])) { ?>
+	<?php
+    echo "<script type='text/javascript'> swal('Usuário encontrado!', 'Realizar login','success').then((value) => {
+     javascript:window.location='../home';
+   });;</script>"; 
+} else {
+	echo "<script type='text/javascript'> swal('Usuário não encontrado', 'Tente novamente ou cadastre-se','error').then((value) => {
 		javascript:window.location='index.html';
 	  });;</script>";
-	}
-} else if (!$conn->query($sql)) {
-
-	echo "Erro: " . $sql . "<br>" . $conn->error;
 }
 // Fechando a conexão com o banco
 $conn->close();
 ?>
 </body>
-
 </html>

@@ -20,7 +20,7 @@ if (isset($usuario['NOME']) && !empty($usuario['NOME'])) { ?>
 <?php
 	$_SESSION["email"] = $usuario['EMAIL'];
 	echo "<script type='text/javascript'> swal('Usuário encontrado!', 'Realizar login','success').then((value) => {
-     javascript:window.location='../home';
+     javascript:window.location='../videos';
    });;</script>";
 } else {
 	echo "<script type='text/javascript'> swal('Usuário não encontrado', 'Tente novamente ou cadastre-se','error').then((value) => {

@@ -42,17 +42,26 @@ if (!$usuario) {
       <li><a type="button" href="../videos">Cadastrar Vídeos</a></li>
     </ul>
   </navbar>
-<div>
-    <?php 
-    while ($video = $resultado->fetch_array()) {
+  <section>
+    <?php
+    $mensagens = 0; 
+    while ($mensagem = $resultado->fetch_array()) {
+    if(!$mensagem['VISUALIZADA']){
+      $mensagens += 1;
     ?>
       <div>
-        Usuario: <?php echo $video['NOME']; ?>
-        mensagem: <?php echo $video['MENSAGEM']; ?>
+        Usuario: <?php echo $mensagem['NOME']; ?>
+        Usuario: <?php echo $mensagem['EMAIL']; ?>
+        Hora da mensagem: <?php echo $mensagem['DATAHORA']; ?>
+        mensagem: <?php echo $mensagem['MENSAGEM']; ?>
       </div>
     <?php 
+      }
+      if(!$mensagens) {
+        echo "SEM MENSAGEM";
+      }
     } 
     ?>
-    </div>
+    </section>
 </body>
 </html>

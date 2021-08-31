@@ -1,15 +1,14 @@
-<?php include "../alerta.php"; ?>
 <form method="POST" action="busca.php">
-		<?php
-		$nome 			 = $_POST['nome'];
-		$senha 			 = $_POST['senha'];
-		$erro 			 = 0;
-
-		echo $nome.$senha."aqui";
+	<?php
+	$email 			 = $_POST['email'];
+	$senha 			 = $_POST['senha'];
+	$erro 			 = 0;
+	echo "eu";
+	echo $email . $senha . "aqui";
 	exit;
-				include "insere.php";
-		?>
+	include "insere.php";
+	?>
 
 	</body>
 
-</html>
+	</html>

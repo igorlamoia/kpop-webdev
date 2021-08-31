@@ -23,12 +23,6 @@ require "../connecta.php";
 		$banda  	= $_POST['banda'];
 		$erro 		= 0;
 
-		//Verifica se o campo nome não está em branco
-		if (empty($nome) || !strstr($nome, ' ')) {
-			$mensagemErro = "Favor digitar o seu nome corretamente.";
-			$erro = 1;
-		}
-
 		//Verifica se o campo url está preenchido corretamente
 		if (strlen($url) < 8 || !strstr($url, 'https://')) {
 			$mensagemErro = "Favor digitar a url corretamente.<br>";
@@ -42,7 +36,7 @@ require "../connecta.php";
 			//Caso apresente erro, mostra o alert e volta para o index.html
 
 			echo "<script type='text/javascript'> swal('Usuário não cadastrado', '$mensagemErro','error').then((value) => {
-				 javascript:window.location='index.html';
+				 javascript:window.location='index.php';
 					 });;</script>";
 		}
 		?>

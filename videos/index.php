@@ -2,7 +2,7 @@
 session_start();
 $usuario = $_SESSION["email"];
 if (!$usuario) {
-  require "../alert.php";
+  require "../alerta.php";
   echo "<script type='text/javascript'> swal('Sessão encerrada', 'Necessário realizar login','error').then((value) => {
 		javascript:window.location='../home';
 	  });;</script>";

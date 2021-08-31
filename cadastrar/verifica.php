@@ -36,10 +36,16 @@
 
 		if (strlen($senha) < 4) {
 			// Vitoria gatinha
-			$MensagemErro = "Senha tem que ter no mínimo 4 digitos.<br>";
+			$MensagemErro = "Senha tem que ter no mínimo 4 digitos";
 			$erro = 1;
 		}
 
+		$sql = "SELECT * from usuarios WHERE EMAIL = '$email'";
+		$resultado = mysqli_query($conn, $sql);
+		if($resultado->fetch_array()) {
+			$MensagemErro = "E-mail já cadastrado!";
+			$erro = 1;
+		}
 		//Verifica se não houve erro - neste caso redireciona para insere.php para inserir os dados
 		if ($erro == 0) {
 				include "insere.php";

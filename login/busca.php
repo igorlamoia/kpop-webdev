@@ -18,6 +18,8 @@ $usuario = $resultado->fetch_array();
 // Executando a variável sql
 if (isset($usuario['NOME']) && !empty($usuario['NOME'])) { ?>
 <?php
+	session_start();
+	$_SESSION["email"] = $usuario['EMAIL'];
 	echo "<script type='text/javascript'> swal('Usuário encontrado!', 'Realizar login','success').then((value) => {
      javascript:window.location='../home';
    });;</script>";

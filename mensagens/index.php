@@ -54,6 +54,8 @@ if (!$usuario) {
         Usuario: <?php echo $mensagem['EMAIL']; ?>
         Hora da mensagem: <?php echo $mensagem['DATAHORA']; ?>
         mensagem: <?php echo $mensagem['MENSAGEM']; ?>
+        <a href="busca.php?id=<?php echo $dado["CODIGO"]."&acao=1" ?>">Marcar como Lida</a>
+        <a href="busca.php?id=<?php echo $dado["CODIGO"]."&acao=2" ?>">Excluir Mensagem</a>
       </div>
     <?php 
       }

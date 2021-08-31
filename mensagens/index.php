@@ -44,26 +44,27 @@ if (!$usuario) {
   </navbar>
   <section>
     <?php
-    $mensagens = 0; 
+    $mensagens = 0;
     while ($mensagem = $resultado->fetch_array()) {
-    if(!$mensagem['VISUALIZADA']){
-      $mensagens += 1;
+      if (!$mensagem['VISUALIZADA']) {
+        $mensagens += 1;
     ?>
-      <div>
-        Usuario: <?php echo $mensagem['NOME']; ?>
-        Usuario: <?php echo $mensagem['EMAIL']; ?>
-        Hora da mensagem: <?php echo $mensagem['DATAHORA']; ?>
-        mensagem: <?php echo $mensagem['MENSAGEM']; ?>
-        <a href="busca.php?id=<?php echo $dado["CODIGO"]."&acao=1" ?>">Marcar como Lida</a>
-        <a href="busca.php?id=<?php echo $dado["CODIGO"]."&acao=2" ?>">Excluir Mensagem</a>
-      </div>
-    <?php 
+        <div>
+          Usuario: <?php echo $mensagem['NOME']; ?>
+          Usuario: <?php echo $mensagem['EMAIL']; ?>
+          Hora da mensagem: <?php echo $mensagem['DATAHORA']; ?>
+          mensagem: <?php echo $mensagem['MENSAGEM']; ?>
+          <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=1" ?>">Marcar como Lida</a>
+          <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=2" ?>">Excluir Mensagem</a>
+        </div>
+    <?php
       }
-      if(!$mensagens) {
-        echo "SEM MENSAGEM";
-      }
-    } 
+    }
+    if (!$mensagens) {
+      echo "SEM MENSAGEM";
+    }
     ?>
-    </section>
+  </section>
 </body>
+
 </html>

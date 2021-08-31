@@ -2,7 +2,6 @@
 session_start();
 $id = $_GET["id"];
 $acao = $_GET["acao"];
-
 include "../alerta.php";
 include "../connecta.php";
 
@@ -22,10 +21,10 @@ $usuario = $resultado->fetch_array();
 // Executando a variável sql
 if (isset($usuario['CODIGO']) && !empty($usuario['CODIGO'])) {
 	//Editar
-	if($acao == '1') {
-		
+	if ($acao == '1') {
+
 		// Guardando na variável $sql a string com os comandos pra ser executada
-		$sql = "UPDATE comentarios SET VISUALIZAR = 1 WHERE CODIGO = '$id'";
+		$sql = "UPDATE comentarios SET VISUALIZADA = 1 WHERE CODIGO = '$id'";
 
 		// Executando a variável sql
 		if ($conn->query($sql)) {
@@ -37,7 +36,6 @@ if (isset($usuario['CODIGO']) && !empty($usuario['CODIGO'])) {
 				javascript:window.location='../cadastrar';
 					});;</script>";
 		}
-
 	} else if ($acao == '2') {
 		// Guardando na variável $sql a string com os comandos pra ser executada
 		$sql = "DELETE from comentarios WHERE CODIGO = '$id'";

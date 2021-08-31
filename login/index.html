@@ -51,11 +51,6 @@
                   required
                 />
               </div>
-
-              <div class="mb-3">
-                <label for="comentarios" class="form-label">Comentários:</label>
-                <textarea class="form-control" id="comentarios" name="comentarios" style="resize: none"  rows="3" required></textarea>
-            </div>
               <button type="submit" name="enviar" class="botao" target="_blank">
                 <span style="z-index: 1">Enviar</span>
               </button>
@@ -64,13 +59,27 @@
       <div class="field">
         <label for="email">E-mail:</label>
         <div class="input-bk">
-          <input type="email" id="email" name="email" placeholder="exemplo@hotmail.com" required/>
+          <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="nome@email.com"
+          name="email"
+          required
+        />
         </div>
       </div>
       <div class="field">
         <label for="email">Senha:</label>
         <div class="input-bk">
-          <input type="password" id="email" name="senha" placeholder="****" required/>
+          <input
+          type="password"
+          class="form-control"
+          id="senha"
+          placeholder="*****"
+          name="senha"
+          required
+        />
         </div>
       </div>
       <button type="submit" name="enviar" class="botao" target="_blank">

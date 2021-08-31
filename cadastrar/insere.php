@@ -1,8 +1,6 @@
 <?php
 include "../alerta.php";
 include "../connecta.php";
-// Criando a conexao de fato
-$conn = new mysqli($servername, $username, $password, $database);
 
 // Checando se foi bem sucedida
 if ($conn->connect_error) {

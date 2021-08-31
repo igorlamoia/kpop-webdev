@@ -10,8 +10,6 @@ if ($conn->connect_error) {
 $email 			 = $_POST['email'];
 $senha 			 = $_POST['senha'];
 
-echo $email.$senha;
-exit;
 // Guardando na variável $sql a string com os comandos pra ser executada
 $sql = "SELECT * from usuarios WHERE SENHA = '$senha' AND EMAIL = '$email'";
 
@@ -19,10 +17,10 @@ $resultado = mysqli_query($conn, $sql);
 $usuario = $resultado->fetch_array();
 // Executando a variável sql
 if (isset($usuario['NOME']) && !empty($usuario['NOME'])) { ?>
-	<?php
-    echo "<script type='text/javascript'> swal('Usuário encontrado!', 'Realizar login','success').then((value) => {
+<?php
+	echo "<script type='text/javascript'> swal('Usuário encontrado!', 'Realizar login','success').then((value) => {
      javascript:window.location='../home';
-   });;</script>"; 
+   });;</script>";
 } else {
 	echo "<script type='text/javascript'> swal('Usuário não encontrado', 'Tente novamente ou cadastre-se','error').then((value) => {
 		javascript:window.location='index.html';
@@ -32,4 +30,5 @@ if (isset($usuario['NOME']) && !empty($usuario['NOME'])) { ?>
 $conn->close();
 ?>
 </body>
+
 </html>

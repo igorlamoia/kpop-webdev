@@ -19,7 +19,7 @@ $usuario = $resultado->fetch_array();
 if (isset($usuario['NOME']) && !empty($usuario['NOME'])) { ?>
 <?php
 	$_SESSION["email"] = $usuario['EMAIL'];
-	echo "<script type='text/javascript'> swal('Usuário encontrado!', 'Realizar login','success').then((value) => {
+	echo "<script type='text/javascript'> swal('Usuário encontrado!', 'Entrando','success').then((value) => {
      javascript:window.location='../videos';
    });;</script>";
 } else {

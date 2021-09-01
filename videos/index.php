@@ -21,6 +21,8 @@ if (!$usuario) {
   <link rel="icon" type="image/png" href="../images/VSicone.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
   <link rel="stylesheet" href="../styles/reset.css" />
   <link rel="stylesheet" href="../styles/estilos.css" />
   <link rel="stylesheet" href="../styles/formulario.css" />
@@ -34,9 +36,12 @@ if (!$usuario) {
   </div>
   <navbar class="menu">
     <ul>
-      <li><a type="button" href="../home">Sair</a></li>
       <li><a type="button" href="../mensagens">Ler Mesagens</a></li>
+      <li><a type="button" href="#">Cadastrar Vídeos</a></li>
     </ul>
+    <div style="margin-right: 10px;">
+      <a style="color: white; display: flex; justify-content: center; align-items: center; gap: 10px" type="button" href="../home"><i title="sair" class="fas fa-sign-out-alt"></i>Sair</a>
+    </div>
   </navbar>
   <div class="caixao">
     <div class="formulario">
@@ -53,7 +58,7 @@ if (!$usuario) {
           </div>
           <div class="mb-3">
             <label for="banda" class="form-label">Banda</label>
-            <input type="text" class="form-control" id="banda" placeholder="****" name="banda" required />
+            <input type="text" class="form-control" id="banda" placeholder="BDS" name="banda" required />
           </div>
           <button type="submit" name="enviar" class="botao" target="_blank">
             <span style="z-index: 1">Cadastrar Vídeo</span>

@@ -41,9 +41,12 @@ if (!$usuario) {
   </div>
   <navbar class="menu">
     <ul>
-      <li><a type="button" href="../home">Sair</a></li>
+      <li><a type="button" href="#">Ler Mensagens</a></li>
       <li><a type="button" href="../videos">Cadastrar Vídeos</a></li>
     </ul>
+    <div style="margin-right: 10px;">
+      <a style="color: white; display: flex; justify-content: center; align-items: center; gap: 10px" type="button" href="../home"><i title="sair" class="fas fa-sign-out-alt"></i>Sair</a>
+    </div>
   </navbar>
   <section>
     <?php
@@ -73,8 +76,8 @@ if (!$usuario) {
               ?>
             </span>
             <div class="icones">
-              <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=1" ?>"><i class="fas fa-archive"></i></a>
-              <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=2" ?>"><i class="far fa-trash-alt"></i></i></a>
+              <a title="Arquivar" href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=1" ?>"><i class="fas fa-archive"></i></a>
+              <a title="Excluir" href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=2" ?>"><i class="far fa-trash-alt"></i></i></a>
             </div>
           </div>
         </div>

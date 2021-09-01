@@ -1,22 +1,27 @@
 .cartoes {
   display: flex;
+  flex: 1fr;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   padding: 10px;
-  max-width: 25%;
+  height: 500px;
+  width: 400px;
+  flex-wrap: nowrap;
   border-radius: 0 5%;
-  color: white;
+  background-color: white;
 }
 
 section {
   display: flex;
+  flex: 3;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
   min-height: 80vh;
   gap: 10px;
+  padding: 30px;
   background: linear-gradient(275deg, #cd2e3b81, #0048a081);
 }
 
@@ -24,13 +29,46 @@ span {
   font-size: 1.2rem;
 }
 
-.final-cartao{
+.final-cartao {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: gray;
 }
 
 .icones {
   display: flex;
   justify-content: space-between;
-  min-width: 30%;
+  min-width: 45px;
+}
+
+.nome {
+  font-size: 2.2rem;
+}
+.email {
+  font-size: 0.9rem;
+}
+.mensagem {
+  font-size: 1rem;
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+}
+
+.data {
+  font-size: 0.9rem;
+}
+
+.linear-text {
+  background: linear-gradient(275deg, #cd2e3a, #0047a0);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.italico {
+  font-style: italic;
 }

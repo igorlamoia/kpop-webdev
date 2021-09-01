@@ -50,12 +50,22 @@ if (!$usuario) {
         $mensagens += 1;
     ?>
         <div>
-          Usuario: <?php echo $mensagem['NOME']; ?>
-          Usuario: <?php echo $mensagem['EMAIL']; ?>
-          Hora da mensagem: <?php echo $mensagem['DATAHORA']; ?>
-          mensagem: <?php echo $mensagem['MENSAGEM']; ?>
-          <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=1" ?>">Marcar como Lida</a>
-          <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=2" ?>">Excluir Mensagem</a>
+          <span>
+            <?php echo $mensagem['NOME']; ?>
+          </span>  
+          <span>
+            <?php echo $mensagem['EMAIL']; ?>
+          </span>
+          <span>
+            mensagem: <?php echo $mensagem['MENSAGEM']; ?>
+          </span>
+          <div class="final-cartao">
+            <?php echo $mensagem['DATAHORA']; ?>
+            <div class="icones">
+              <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=1" ?>"><i class="fal fa-comment-alt-times"></i>Marcar como Lida</a>
+              <a href="./busca.php?id=<?php echo $mensagem["CODIGO"] . "&acao=2" ?>"><i class="far fa-envelope"></i>Excluir Mensagem</a>
+            </div>
+          </div>
         </div>
     <?php
       }
@@ -65,6 +75,13 @@ if (!$usuario) {
     }
     ?>
   </section>
+  <footer>
+      <span>Contatos:</span> 
+      <a href="https://www.instagram.com/lamoiaigor/" target="_blank" rel="noopener">Igor Lamoia
+      <img src="../imagem/instal.png" alt="instagram logo"/></a>
+      <a href="https://www.instagram.com/michael_hinoyama/" target="_blank" rel="noopener">Michael Andre
+      <img src="../imagem/instal.png" alt="instagram logo"/></a>
+      <span>&copy 2021</span>    
+    </footer>
 </body>
-
 </html>

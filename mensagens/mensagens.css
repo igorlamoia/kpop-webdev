@@ -1,0 +1,36 @@
+.cartoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  max-width: 25%;
+  border-radius: 0 5%;
+  color: white;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 80vh;
+  gap: 10px;
+  background: linear-gradient(275deg, #cd2e3b81, #0048a081);
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+.final-cartao{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icones {
+  display: flex;
+  justify-content: space-between;
+  min-width: 30%;
+}

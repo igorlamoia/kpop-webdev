@@ -1,0 +1,72 @@
+.cartoes {
+  display: flex;
+  flex: 1fr;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  height: 500px;
+  width: 400px;
+  flex-wrap: nowrap;
+  border-radius: 0 5%;
+  background-color: white;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  gap: 10px;
+  padding: 30px;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+.final-cartao {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: gray;
+}
+
+.icones {
+  display: flex;
+  justify-content: space-between;
+  min-width: 45px;
+}
+
+.nome {
+  font-size: 2.2rem;
+}
+.email {
+  font-size: 0.9rem;
+}
+.mensagem {
+  font-size: 1rem;
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+}
+
+.data {
+  font-size: 0.9rem;
+}
+
+.linear-text {
+  background: linear-gradient(275deg, #cd2e3a, #0047a0);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.italico {
+  font-style: italic;
+}

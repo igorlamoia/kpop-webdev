@@ -24,7 +24,7 @@ O site contemplou o <b>CRUD</b> básico (Create, Read, Update, Delete).
 
 # Youtube:
 
-<a href="https://www.youtube.com/watch?v=g05jE5UKbF8">Vídeo demonstração</a>
+<a href="https://www.youtube.com/watch?v=g05jE5UKbF8" target="_blank">Vídeo demonstração</a>
 
 <p align="center">
   <a href="#Tecnologias">Tecnologias</a>&nbsp;&nbsp; | <a href="#Imagens">Imagens</a>
@@ -32,10 +32,10 @@ O site contemplou o <b>CRUD</b> básico (Create, Read, Update, Delete).
 
 # Tecnologias 💻:
 
-- [HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp; / [CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)&nbsp; / [JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;;
-- [BOOTSTRAP](https://img.shields.io/badge/-BOOTSTRAP-05122A?style=flat&logo=BOOTSTRAP) para slide e forms;
-- [PHP](https://img.shields.io/badge/-PHP-05122A?style=flat&logo=PHP)&nbsp; para as validações;
-- [MYSQL](https://img.shields.io/badge/-MYSQL-05122A?style=flat&logo=MYSQL).
+- ![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp; ![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)&nbsp; ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;;
+- ![BOOTSTRAP](https://img.shields.io/badge/-BOOTSTRAP-05122A?style=flat&logo=BOOTSTRAP) para slide e forms;
+- ![PHP](https://img.shields.io/badge/-PHP-05122A?style=flat&logo=PHP)&nbsp; para as validações;
+- ![MYSQL](https://img.shields.io/badge/-MYSQL-05122A?style=flat&logo=MYSQL)
 
 # Imagens
 
